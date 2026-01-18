@@ -82,7 +82,7 @@ const Events = () => {
                     <img 
                       src={selectedEvent.image} 
                       alt={selectedEvent.title} 
-                      className="w-full h-full object-cover" 
+                      className="w-full h-full object-contain bg-gray-100" 
                     />
                     <div className="absolute top-4 left-4">
                         <span className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-mnit-blue font-bold text-sm shadow-lg">

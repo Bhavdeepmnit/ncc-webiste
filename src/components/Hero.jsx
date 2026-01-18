@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import hero1 from '../assets/hero1.png';
-import hero2 from '../assets/hero2.png';
 import hero3 from '../assets/Hero3.jpg';
 import hero4 from '../assets/hero4.jpeg';
-import hero5 from '../assets/hero5.png';
-import hero6 from '../assets/hero6.png';
 
-const images = [hero1, hero2, hero3, hero4, hero5, hero6];
+const images = [hero3, hero4];
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
