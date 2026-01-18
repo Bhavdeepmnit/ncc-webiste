@@ -1,5 +1,7 @@
 import armyDay from '../assets/Army day event_.jpg';
 import shauryaSandhya from '../assets/Army day shourya Sandhya_.jpg';
+import cleanlinessImage from '../assets/Cleanliness campaign_.jpg';
+import plantationImage from '../assets/Plantation_.jpg';
 
 export const eventsData = [
   {
@@ -43,6 +45,32 @@ export const eventsData = [
       "With a focus on themes of bravery, sacrifice, unity, and national pride, the event featured a big cultural and patriotic presentation that portrayed India's history from 1947 to the present.",
       "An energetic Mallakhamb display, a theme-based act on Operation Sindoor, a visually stunning drone show, Kalaripayattu with live musical beats, and fire acts with mouth-blast fire and pillar feats were among the program's outstanding performances.",
       "For MNIT NCC cadets, it was an incredibly motivating educational experience. It inspired us to make constructive contributions to the country by strengthening our sense of discipline, patriotism, solidarity, and respect for the armed forces."
+    ]
+  },
+  {
+    id: 5,
+    title: "Tree Plantation Drive",
+    date: "January 18, 2025",
+    time: "08:30",
+    location: "MNIT Campus, Jaipur",
+    image: plantationImage,
+    description: [
+      "NCC cadets organized a massive tree plantation drive within the MNIT campus to promote environmental sustainability and green living. The event saw enthusiastic participation from cadets, students, and faculty members.",
+      "Over 500 saplings of various indigenous species were planted across designated areas of the campus. The drive aimed to increase the green cover and create awareness about the importance of trees in combating climate change.",
+      "The Director of MNIT graced the occasion and appreciated the efforts of the NCC unit in contributing towards a greener and healthier environment."
+    ]
+  },
+  {
+    id: 4,
+    title: "Cleanliness Campaign (Swachhata Abhiyan)",
+    date: "January 18, 2025",
+    time: "07:00",
+    location: "MNIT Campus, Jaipur",
+    image: cleanlinessImage,
+    description: [
+      "In observance of Gandhi Jayanti, the NCC unit of MNIT Jaipur conducted a 'Swachhata Abhiyan' (Cleanliness Campaign) in the nearby localities. The cadets took to the streets equipped with brooms and garbage bags to clean up public spaces.",
+      "The campaign aimed to spread the message of cleanliness and hygiene among the local residents. Cadets also interacted with the public, urging them to maintain cleanliness in their surroundings and avoid single-use plastics.",
+      "This initiative reflects the NCC's commitment to social service and community development, instilling a sense of civic responsibility in the young cadets."
     ]
   }
 ];
