@@ -1,136 +1,134 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, MapPin, Clock } from 'lucide-react';
+import { eventsData } from '../data/events';
 
-const eventsData = [
-  {
-    id: 3,
-    title: "Republic Day Celebration",
-    date: "January 26, 2026",
-    time: "08:00",
-    location: "MNIT Campus, Jaipur",
-    image: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?q=80&w=2676&auto=format&fit=crop",
-    description: [
-      "The 77th Republic Day was celebrated with great patriotic fervor at MNIT Jaipur. The event began with the unfurling of the National Flag by the Director, followed by the National Anthem.",
-      "NCC cadets performed a spectacular march-past, demonstrating impeccable coordination and discipline. The event also featured cultural performances by students, aimed at promoting national integration and showcasing India's rich cultural diversity.",
-      "The Director addressed the gathering, emphasizing the role of youth in nation-building and urging everyone to uphold the values enshrined in the Constitution."
-    ]
-  },
-  {
-    id: 2,
-    title: "Army Day Parade Rehearsal",
-    date: "January 11, 2026",
-    time: "09:00",
-    location: "Mahal Road, Jaipur",
-    image: "https://images.unsplash.com/photo-1579961667104-d5763b0a688b?q=80&w=2670&auto=format&fit=crop", 
-    description: [
-      "Eight SD and four SW NCC cadets from Malviya National Institute of Technology (MNIT) Jaipur, along with Dr. Anup Malik, CTO (NCC), attended the Army Day Parade Rehearsal held at Mahal Road, Jaipur, on 11 January 2026, starting at 9:00 AM.",
-      "The rehearsal showcased an impressive and well-coordinated display by the Indian Army, including ceremonial march-past contingents, military bands, mechanized columns, and aerial flypasts by Army helicopters, reflecting the Army’s discipline, precision, and operational preparedness.",
-      "Various combat and support arms demonstrated their roles through formations and equipment displays, offering a comprehensive glimpse into the Army’s capabilities.",
-      "Attending the rehearsal provided NCC cadets with first-hand exposure to military traditions, leadership, teamwork, and discipline, while instilling a sense of patriotism and pride.",
-      "The event proved highly motivating for the cadets, enhancing their understanding of defence services and reinforcing the core values of the NCC such as unity, integrity, and selfless service to the nation."
-    ]
-  },
-  {
-    id: 1,
-    title: "Shaurya Sandhya",
-    date: "January 10, 2026",
-    time: "16:00",
-    location: "Sawai Mansingh Stadium (SMS), Jaipur",
-    image: "https://images.unsplash.com/photo-1579961667087-9bb3a628172c?q=80&w=2835&auto=format&fit=crop", 
-    description: [
-      "Six SD and four SW NCC cadets from Malviya National Institute of Technology (MNIT) Jaipur, as well as Dr. Anup Malik (NCC, CTO), attended the Shaurya Sandhya event at Sawai Mansingh Stadium (SMS), Jaipur.",
-      "General Officer Commanding-in-Chief South Western Command Lieutenant General Manjinder Singh officially opened the ceremony. The event was held at SMS stadium in order to allow a huge number of people to witness and relate to the spirit of patriotism.",
-      "With a focus on themes of bravery, sacrifice, unity, and national pride, the event featured a big cultural and patriotic presentation that portrayed India's history from 1947 to the present.",
-      "An energetic Mallakhamb display, a theme-based act on Operation Sindoor, a visually stunning drone show, Kalaripayattu with live musical beats, and fire acts with mouth-blast fire and pillar feats were among the program's outstanding performances.",
-      "For MNIT NCC cadets, it was an incredibly motivating educational experience. It inspired us to make constructive contributions to the country by strengthening our sense of discipline, patriotism, solidarity, and respect for the armed forces."
-    ]
-  }
-];
+
 
 const Events = () => {
+  const [selectedEvent, setSelectedEvent] = React.useState(null);
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Cinematic Hero Section - White Theme */}
-      <div className="w-full bg-white pt-40 pb-20">
-        <div className="relative z-10 w-full flex flex-col justify-center items-center text-center px-4">
-          <motion.div
-             initial={{ opacity: 0, y: 30 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-              <h1 className="text-6xl md:text-8xl font-bold text-mnit-blue mb-4 tracking-tighter">
-                Our Saga
-              </h1>
-              <div className="h-1 w-24 bg-mnit-red mx-auto mb-6"></div>
-              <p className="text-xl md:text-2xl text-gray-600 font-light max-w-2xl mx-auto">
-                 Moments of <span className="font-semibold text-mnit-red">Valor</span>, <span className="font-semibold text-mnit-blue">Honor</span>, and <span className="font-semibold text-mnit-red">Pride</span>.
-              </p>
-          </motion.div>
+    <div className="min-h-screen bg-white py-20">
+      
+      {/* Header with Lines */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 mb-16">
+        <div className="flex items-center gap-4">
+           <div className="h-0.5 bg-mnit-blue flex-1 opacity-20"></div>
+           <h1 className="text-3xl md:text-5xl font-bold text-mnit-blue uppercase tracking-widest text-center">
+             Past Events
+           </h1>
+           <div className="h-0.5 bg-mnit-blue flex-1 opacity-20"></div>
         </div>
       </div>
 
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 pb-32">
-        {/* Events Timeline */}
-        <div className="space-y-32">
-          {eventsData.map((event, index) => (
-            <motion.div 
+      {/* Events Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {eventsData.map((event) => (
+            <motion.div
               key={event.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-15%" }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-24 items-center`}
+              layoutId={`card-${event.id}`}
+              onClick={() => setSelectedEvent(event)}
+              whileHover={{ y: -10 }}
+              className="group cursor-pointer"
             >
-              {/* Image Section */}
-              <div className="w-full lg:w-1/2 relative group">
-                <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl">
-                    <img 
-                      src={event.image} 
-                      alt={event.title} 
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
-                </div>
+              <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-lg border border-gray-100 bg-gray-50">
+                <img 
+                  src={event.image} 
+                  alt={event.title} 
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
                 
-                {/* Decorative Offset Border */}
-                <div className={`absolute -inset-4 border-2 border-gray-100 rounded-3xl -z-10 hidden md:block transition-transform duration-500 group-hover:scale-105 ${index % 2 === 0 ? 'translate-x-4 translate-y-4' : '-translate-x-4 translate-y-4'}`}></div>
+                {/* Overlay Title on Hover */}
+                <div className="absolute inset-0 flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div className="text-white text-center w-full">
+                       <p className="font-bold text-lg mb-1">{event.date.split(',')[0]}</p>
+                       <p className="text-xs uppercase tracking-wider">View Details</p>
+                   </div>
+                </div>
               </div>
-
-              {/* Content Section */}
-              <div className="w-full lg:w-1/2">
-                <h2 className="text-4xl md:text-6xl font-bold text-mnit-blue mb-6 leading-none tracking-tight">
-                  {event.title}
-                </h2>
-
-                <div className="flex flex-wrap gap-6 mb-10 text-sm md:text-base text-gray-400 font-medium uppercase tracking-widest border-b border-gray-100 pb-6">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-mnit-red" />
-                    {event.date}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-mnit-red" />
-                    {event.location}
-                  </div>
-                </div>
-
-                <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-light">
-                  {event.description.map((paragraph, i) => (
-                    <p key={i}>
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-                
-                <div className="mt-12 flex items-center gap-4 group cursor-pointer w-fit opacity-60 hover:opacity-100 transition-opacity">
-                    <span className="text-sm font-bold text-mnit-red uppercase tracking-widest">Share this moment</span>
-                    <div className="h-px w-12 bg-mnit-red group-hover:w-20 transition-all"></div>
-                </div>
+              
+              <div className="mt-4 text-center">
+                 <h3 className="text-lg font-bold text-mnit-blue line-clamp-1">{event.title}</h3>
+                 <p className="text-sm text-gray-500">{event.location}</p>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      {/* Event Details Modal */}
+      <AnimatePresence>
+        {selectedEvent && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedEvent(null)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+            />
+            <motion.div
+              layoutId={`card-${selectedEvent.id}`}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
+            >
+              <div 
+                className="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl pointer-events-auto flex flex-col md:flex-row overflow-hidden"
+              >
+                 {/* Modal Image */}
+                 <div className="w-full md:w-1/2 h-64 md:h-auto relative">
+                    <img 
+                      src={selectedEvent.image} 
+                      alt={selectedEvent.title} 
+                      className="w-full h-full object-cover" 
+                    />
+                    <div className="absolute top-4 left-4">
+                        <span className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-mnit-blue font-bold text-sm shadow-lg">
+                           {selectedEvent.date}
+                        </span>
+                    </div>
+                 </div>
+
+                 {/* Modal Content */}
+                 <div className="w-full md:w-1/2 p-8 md:p-12 bg-white relative">
+                    <button 
+                        onClick={() => setSelectedEvent(null)}
+                        className="absolute top-6 right-6 p-2 rounded-full hover:bg-gray-100 transition-colors"
+                    >
+                        <span className="sr-only">Close</span>
+                        <svg className="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <h2 className="text-3xl font-bold text-mnit-blue mb-2">{selectedEvent.title}</h2>
+                    <div className="flex items-center gap-2 text-mnit-red font-medium mb-8">
+                        <MapPin className="w-4 h-4" />
+                        {selectedEvent.location}
+                    </div>
+
+                    <div className="space-y-4 text-gray-600 leading-relaxed overflow-y-auto max-h-[40vh] pr-2 custom-scrollbar">
+                         {selectedEvent.description.map((p, i) => (
+                             <p key={i}>{p}</p>
+                         ))}
+                    </div>
+
+                    <div className="mt-8 pt-6 border-t border-gray-100">
+                        <button 
+                            onClick={() => setSelectedEvent(null)}
+                            className="w-full py-3 bg-mnit-blue text-white rounded-xl font-bold uppercase tracking-wide hover:bg-blue-900 transition-colors"
+                        >
+                            Close
+                        </button>
+                    </div>
+                 </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

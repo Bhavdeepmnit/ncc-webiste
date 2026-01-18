@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import hero1 from '../assets/hero1.png';
 import hero2 from '../assets/hero2.png';
-import hero3 from '../assets/hero3.png';
-import hero4 from '../assets/hero4.png';
+import hero3 from '../assets/Hero3.jpg';
+import hero4 from '../assets/hero4.jpeg';
 import hero5 from '../assets/hero5.png';
 import hero6 from '../assets/hero6.png';
 
