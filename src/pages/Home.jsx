@@ -65,26 +65,57 @@ const Home = () => {
           
           <div className="flex flex-col space-y-16 max-w-5xl mx-auto">
             {/* Aim */}
-            <div className="space-y-8">
-              <h3 className="text-3xl font-bold text-mnit-blue flex items-center gap-3">
-                <Target className="w-8 h-8 text-mnit-red" /> Our Aim
-              </h3>
-              <p className="text-gray-600 italic border-l-4 border-gray-200 pl-4 py-2">
-                "The Aims of the NCC laid out in 1988 have stood the test of time and continue to meet the requirements of the current socio-economic scenario."
-              </p>
-              <div className="space-y-6">
-                 <FeatureCard icon={Users} title="Human Resource" delay={0.1}>
-                    To Create a Human Resource of Organized, Trained and Motivated Youth, to Provide Leadership in all Walks of life and be Always Available for the Service of the Nation.
-                 </FeatureCard>
-                 <FeatureCard icon={Shield} title="Motivation" delay={0.2}>
-                    To Provide a Suitable Environment to Motivate the Youth to Take Up a Career in the Armed Forces.
-                 </FeatureCard>
-                 <FeatureCard icon={Award} title="Character Building" delay={0.3}>
-                    To Develop Character, Comradeship, Discipline, Leadership, Secular Outlook, Spirit of Adventure, and Ideals of Selfless Service amongst the Youth.
-                 </FeatureCard>
-              </div>
-              <p className="text-xs text-gray-400 mt-4 text-right">Source: indiancc.nic.in</p>
-            </div>
+            <motion.div 
+              whileHover={{ scale: 1.01 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 relative overflow-hidden"
+            >
+               <div className="relative z-10">
+                 <h3 className="text-3xl font-bold text-mnit-blue flex items-center gap-3 mb-8">
+                  <Target className="w-8 h-8 text-mnit-red" /> Our Aim
+                </h3>
+                
+                <p className="text-gray-600 italic border-l-4 border-mnit-red pl-6 py-4 mb-10 bg-gray-50/50 rounded-r-xl text-lg leading-relaxed">
+                  "The Aims of the NCC laid out in 1988 have stood the test of time and continue to meet the requirements of the current socio-economic scenario."
+                </p>
+                
+                <ul className="space-y-8">
+                  <li className="flex items-start gap-5 group">
+                    <div className="flex-shrink-0 w-12 h-12 bg-mnit-blue/5 rounded-2xl flex items-center justify-center mt-1 group-hover:bg-mnit-blue group-hover:text-white transition-all duration-300">
+                      <Users className="w-6 h-6 text-mnit-blue group-hover:text-white transition-colors" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-mnit-blue transition-colors">Human Resource</h4>
+                      <p className="text-gray-600 leading-relaxed">To Create a Human Resource of Organized, Trained and Motivated Youth, to Provide Leadership in all Walks of life and be Always Available for the Service of the Nation.</p>
+                    </div>
+                  </li>
+                  
+                  <li className="flex items-start gap-5 group">
+                    <div className="flex-shrink-0 w-12 h-12 bg-mnit-blue/5 rounded-2xl flex items-center justify-center mt-1 group-hover:bg-mnit-blue group-hover:text-white transition-all duration-300">
+                      <Shield className="w-6 h-6 text-mnit-blue group-hover:text-white transition-colors" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-mnit-blue transition-colors">Motivation</h4>
+                      <p className="text-gray-600 leading-relaxed">To Provide a Suitable Environment to Motivate the Youth to Take Up a Career in the Armed Forces.</p>
+                    </div>
+                  </li>
+                  
+                   <li className="flex items-start gap-5 group">
+                    <div className="flex-shrink-0 w-12 h-12 bg-mnit-blue/5 rounded-2xl flex items-center justify-center mt-1 group-hover:bg-mnit-blue group-hover:text-white transition-all duration-300">
+                      <Award className="w-6 h-6 text-mnit-blue group-hover:text-white transition-colors" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-mnit-blue transition-colors">Character Building</h4>
+                      <p className="text-gray-600 leading-relaxed">To Develop Character, Comradeship, Discipline, Leadership, Secular Outlook, Spirit of Adventure, and Ideals of Selfless Service amongst the Youth.</p>
+                    </div>
+                  </li>
+                </ul>
+                
+                <div className="mt-10 pt-6 border-t border-gray-100 flex justify-end">
+                  <span className="text-xs text-gray-400 font-medium bg-gray-50 px-4 py-1.5 rounded-full border border-gray-100">Source: indiancc.nic.in</span>
+                </div>
+               </div>
+            </motion.div>
 
             {/* Pledge */}
             <div className="h-full">
@@ -129,7 +160,7 @@ const Home = () => {
             }}
             className="space-y-12 max-w-4xl mx-auto"
           >
-            <div className="text-xl md:text-2xl leading-relaxed text-gray-700 font-medium tracking-wide">
+            <div className="text-xl md:text-2xl leading-relaxed text-gray-700 font-medium tracking-wide text-justify mx-auto">
               <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="mb-8">
                 Hum Sab Bharatiya Hain, Hum Sab Bharatiya Hain<br />
                 Apni Manzil Ek Hai, Ha, Ha, Ha, Ek Hai, Ho, Ho, Ho, Ek Hai.<br />
