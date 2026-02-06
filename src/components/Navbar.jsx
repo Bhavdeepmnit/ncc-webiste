@@ -36,7 +36,7 @@ const Navbar = () => {
     );
 
   return (
-    <nav className="bg-mnit-blue/95 backdrop-blur-md shadow-lg sticky top-0 z-50 transition-all duration-300">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full bg-mnit-blue backdrop-blur-md border border-white/10 shadow-2xl z-50 transition-all duration-300">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-12">
         <div className="relative flex justify-between h-24 items-center">
           {/* Left: NCC Logo -> Home */}
@@ -44,8 +44,8 @@ const Navbar = () => {
             <Link to="/" className="flex items-center gap-3">
               <img src={nccLogo} alt="NCC Logo" className="h-16 w-16 rounded-full object-cover border-2 border-white/20" />
               <div className="hidden sm:block">
-                <span className="block font-bold text-xl text-white leading-none">NCC</span>
-                <span className="block text-xs text-gray-300 font-medium tracking-wider">MNIT JAIPUR</span>
+                <span className="block font-bold text-xl text-white leading-none">National Cadet Corps</span>
+                <span className="block text-l text-gray-300 font-medium tracking-wider">राष्ट्रीय कैडेट कोर</span>
               </div>
             </Link>
           </div>
@@ -63,6 +63,10 @@ const Navbar = () => {
           <div className="hidden md:flex items-center">
             <a href="https://mnit.ac.in" target="_blank" rel="noopener noreferrer" className="flex items-center transition-opacity hover:opacity-90">
                <img src={mnitLogo} alt="MNIT Logo" className="h-16 w-auto" />
+               <div className="hidden sm:block">
+                <span className="block text-l text-gray-300 font-medium tracking-wider">MNIT Jaipur</span>
+                <span className="block text-l text-gray-300 font-medium tracking-wider">मालवीय राष्ट्रीय प्रौद्योगिकी संस्थान</span>
+              </div>
             </a>
           </div>
 
@@ -81,7 +85,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-mnit-blue border-t border-gray-700">
+        <div className="md:hidden bg-mnit-blue/90 backdrop-blur-xl border-t border-white/10 rounded-b-3xl mt-2 pb-2">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <NavLink

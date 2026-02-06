@@ -2,6 +2,7 @@ import armyDay from '../assets/Army day event_.jpg';
 import shauryaSandhya from '../assets/Army day shourya Sandhya_.jpg';
 import cleanlinessImage from '../assets/Cleanliness campaign_.jpg';
 import plantationImage from '../assets/Plantation_.jpg';
+import hero2 from '../assets/Hero2.jpeg';
 
 export const eventsData = [
   {
@@ -9,8 +10,8 @@ export const eventsData = [
     title: "Republic Day Celebration",
     date: "January 26, 2026",
     time: "08:00",
-    location: "MNIT Campus, Jaipur",
-    image: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?q=80&w=2676&auto=format&fit=crop",
+    location: "Prabha Bhawan, MNIT Jaipur",
+    image: hero2,
     description: [
       "The 77th Republic Day was celebrated with great patriotic fervor at MNIT Jaipur. The event began with the unfurling of the National Flag by the Director, followed by the National Anthem.",
       "NCC cadets performed a spectacular march-past, demonstrating impeccable coordination and discipline. The event also featured cultural performances by students, aimed at promoting national integration and showcasing India's rich cultural diversity.",

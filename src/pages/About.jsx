@@ -16,7 +16,7 @@ const About = () => {
                 >
                     {/* Text Section */}
                     <div className="lg:w-1/2">
-                        <div className="mb-6">
+                        <div className="mb-6">~
                             <h2 className="text-mnit-red font-bold tracking-widest uppercase text-sm mb-2">Who We Are</h2>
                             <h1 className="text-3xl md:text-5xl font-bold text-mnit-blue leading-tight">
                                 UNITY AND DISCIPLINE <span className="font-hindi">एकता और अनुशासन</span>
@@ -25,14 +25,15 @@ const About = () => {
                         
                         <div className="space-y-6 text-gray-600 leading-relaxed text-lg text-justify">
                             <p>
-                                The National Cadet Corps (NCC) is a youth development movement. It has enormous potential for nation-building. NCC IIT Roorkee is one of the oldest NCC units in the country, providing opportunities to the youth for their overall development with a sense of Duty, Commitment, Dedication, Discipline so that they become able leaders and useful citizens.
+                                The National Cadet Corps (NCC) is a premier youth organization dedicated to character building, leadership development, and nation-building. With its core values of discipline, integrity, and service, the NCC plays a vital role in shaping responsible and motivated citizens of the country.                               </p>
+                            <p>
+                                The NCC unit at Malaviya National Institute of Technology (MNIT) Jaipur, established recently in 2025, marks an important step toward fostering a culture of discipline, unity, and social responsibility among the students of the institute. Affiliated to the 8 Raj Bn NCC Jaipur, the unit commenced its journey with 18 enthusiastic cadets in its first year, with a total sanctioned strength of 54 cadets, and aligns with the institute’s vision of holistic student development in accordance with the National Education Policy (NEP) 2020.
                             </p>
                             <p>
-                                The National Cadet Corps, IIT Roorkee under the 10 UK Bn NCC Composite Technical Regiment National Cadet Corps is a student unit of the Indian Army which aims to develop a sense of discipline, rigour, and unity in the cadets. It provides a platform for the students to develop their personalities by engaging themselves in various events. The Guard of Honour, Indoor and outdoor sports events, firing practice, and Training camps aim to inculcate the values of teamwork and discipline in the cadets and exposure to life in the Army.
+                                The unit provides a structured platform for cadets to develop leadership qualities, physical fitness, and a strong sense of duty through military-oriented training and character-building activities. Through drills, physical training, camps, and participation in institutional and national events, the MNIT Jaipur NCC aims to inculcate teamwork, confidence, and resilience, while offering exposure to the ethos and values of the armed forces.
                             </p>
                             <p>
-                                At the same time, working for the society, the NCC conducts plantation and cleanliness drives, awareness campaigns, and activities for social causes to instill the spirit of service in the young cadets. Currently, the NCC has 420 active members who are continuously guided by the Unit's Commanding Officer and are working towards self-development and nation-building. 'UNITY AND DISCIPLINE,' the motto of the NCC, precisely highlights the aim and culture of the unit.
-                            </p>
+                                Alongside training, the unit actively engages in social outreach activities such as cleanliness drives, plantation programs, and awareness campaigns, nurturing a spirit of service and civic responsibility among young cadets. Guided by dedicated officers and instructors, the MNIT Jaipur NCC is steadily growing and working towards its vision of developing disciplined leaders and responsible citizens, truly embodying the NCC motto — “Unity and Discipline.”                            </p>
                         </div>
                     </div>
 

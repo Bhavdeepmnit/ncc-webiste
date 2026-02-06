@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import hero1 from '../assets/Hero1.jpeg';
+import hero2 from '../assets/Hero2.jpeg';
 import hero3 from '../assets/Hero3.jpg';
 import hero4 from '../assets/hero4.jpeg';
 
-const images = [hero3, hero4];
+const images = [hero1, hero2, hero3, hero4];
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,7 +19,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[calc(100vh-6rem)] min-h-[600px] overflow-hidden bg-mnit-blue">
+    <div className="relative w-full h-screen min-h-[600px] overflow-hidden bg-mnit-blue">
       {/* Background Image Slider */}
       <AnimatePresence mode="popLayout">
         <motion.img
@@ -34,7 +36,7 @@ const Hero = () => {
 
       {/* Faded Blue Overlay */}
       <div className="absolute inset-0 bg-mnit-blue/30 mix-blend-multiply z-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-mnit-blue via-transparent to-transparent z-10"></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-t from-mnit-blue via-transparent to-transparent z-10"></div> */}
 
       {/* Content Container */}
       <div className="relative z-20 h-full flex flex-col justify-end items-start text-left px-4 sm:px-6 lg:px-12 pb-12 md:pb-24 lg:pb-32 w-full">

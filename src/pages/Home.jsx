@@ -160,7 +160,7 @@ const Home = () => {
             }}
             className="space-y-12 max-w-4xl mx-auto"
           >
-            <div className="text-xl md:text-2xl leading-relaxed text-gray-700 font-medium tracking-wide text-justify mx-auto">
+            <div className="text-xl md:text-2xl leading-relaxed text-gray-700 font-medium tracking-wide text-center mx-auto">
               <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="mb-8">
                 Hum Sab Bharatiya Hain, Hum Sab Bharatiya Hain<br />
                 Apni Manzil Ek Hai, Ha, Ha, Ha, Ek Hai, Ho, Ho, Ho, Ek Hai.<br />
