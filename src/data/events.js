@@ -50,28 +50,26 @@ export const eventsData = [
   },
   {
     id: 5,
-    title: "Tree Plantation Drive",
+    title: "Plantation Drive",
     date: "January 18, 2025",
     time: "08:30",
     location: "MNIT Campus, Jaipur",
     image: plantationImage,
     description: [
-      "NCC cadets organized a massive tree plantation drive within the MNIT campus to promote environmental sustainability and green living. The event saw enthusiastic participation from cadets, students, and faculty members.",
-      "Over 500 saplings of various indigenous species were planted across designated areas of the campus. The drive aimed to increase the green cover and create awareness about the importance of trees in combating climate change.",
-      "The Director of MNIT graced the occasion and appreciated the efforts of the NCC unit in contributing towards a greener and healthier environment."
+      "NCC cadets organized a plantation drive within the NCC office premises of MNIT Jaipur to enhance the aesthetic appeal and overall beautification of the area.",
+      "The drive witnessed enthusiastic participation from cadets, with various species of flowering plants planted at designated locations to create a greener and more pleasant environment."
     ]
   },
   {
     id: 4,
-    title: "Cleanliness Campaign (Swachhata Abhiyan)",
+    title: "Cleanliness Campaign",
     date: "January 18, 2025",
     time: "07:00",
     location: "MNIT Campus, Jaipur",
     image: cleanlinessImage,
     description: [
-      "In observance of Gandhi Jayanti, the NCC unit of MNIT Jaipur conducted a 'Swachhata Abhiyan' (Cleanliness Campaign) in the nearby localities. The cadets took to the streets equipped with brooms and garbage bags to clean up public spaces.",
-      "The campaign aimed to spread the message of cleanliness and hygiene among the local residents. Cadets also interacted with the public, urging them to maintain cleanliness in their surroundings and avoid single-use plastics.",
-      "This initiative reflects the NCC's commitment to social service and community development, instilling a sense of civic responsibility in the young cadets."
+      "NCC cadets organized a cleanliness drive within the NCC office premises of MNIT Jaipur to improve hygiene and enhance the overall appearance of the area.",
+      "The drive witnessed enthusiastic participation from cadets, who collectively cleaned the premises and ensured proper disposal of waste to create a cleaner and more orderly environment."
     ]
   }
 ];
