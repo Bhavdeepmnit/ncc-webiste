@@ -1,4 +1,4 @@
-import Director from '../assets/Director.jpg';
+import Director from '../assets/director.jpg';
 import dean from '../assets/dean.png';
 import image from '../assets/image.png';
 
